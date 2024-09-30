@@ -1,10 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import ListBien from './components/ListBien.vue'
-import Banner from './components/Banner.vue'
+import AppartementList from './components/AppartementList.vue'
+import Header from './components/Header.vue'
 
-/***** Train call api *****/
 fetch('http://localhost:5001/train-note', {
   method: 'POST',
   headers: {
@@ -26,12 +23,11 @@ fetch('http://localhost:5001/train-garage', {
   },
   body: ''
 });
-/******* *******/
 </script>
 
 <template>
-    <Banner />
-<ListBien />
+    <Header />
+    <AppartementList />
 </template>
 
 <style scoped>
